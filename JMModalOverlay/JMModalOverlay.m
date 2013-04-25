@@ -250,9 +250,8 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
 }
 
 - (void) _afterShow{
-    [NSApp runModalForWindow:_modalWindow];
-
     [[NSNotificationCenter defaultCenter] postNotificationName:JMModalOverlayDidShowNotification object:self];
+    [NSApp runModalForWindow:_modalWindow];
 }
 
 
