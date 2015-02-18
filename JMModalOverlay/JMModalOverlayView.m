@@ -42,10 +42,6 @@
     
     [[self layer] setCornerRadius:4];
     [[self layer] setMasksToBounds:YES];
-    [[self layer] setBorderWidth:0.5];
-    
-    [[self layer] setBorderColor:[[NSColor colorWithCalibratedWhite:1 alpha:0.2] CGColor]];
-
 
 }
 
