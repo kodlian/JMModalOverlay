@@ -23,7 +23,7 @@
 		A74EE4F917268FBE006EFBAA /* JMSecondExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A74EE4F717268FBE006EFBAA /* JMSecondExampleViewController.m */; };
 		A74EE4FA17268FBE006EFBAA /* JMSecondExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74EE4F817268FBE006EFBAA /* JMSecondExampleViewController.xib */; };
 		A74EE4FB1726910F006EFBAA /* JMModalOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74EE4BB17267BE8006EFBAA /* JMModalOverlay.framework */; };
-		A74EE4FF17269120006EFBAA /* JMModalOverlay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74EE4BB17267BE8006EFBAA /* JMModalOverlay.framework */; };
+		A74EE4FF17269120006EFBAA /* JMModalOverlay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74EE4BB17267BE8006EFBAA /* JMModalOverlay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A74EE50217269609006EFBAA /* JMOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = A74EE50017269609006EFBAA /* JMOverlayView.h */; settings = {ATTRIBUTES = (); }; };
 		A74EE50317269609006EFBAA /* JMOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74EE50117269609006EFBAA /* JMOverlayView.m */; };
 		A74EE5051726B006006EFBAA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74EE5041726B006006EFBAA /* QuartzCore.framework */; };
@@ -285,7 +285,7 @@
 		A74EE4B217267BE8006EFBAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Jérémy Marchand";
 			};
 			buildConfigurationList = A74EE4B517267BE8006EFBAA /* Build configuration list for PBXProject "JMModalOverlay" */;
@@ -403,7 +403,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -436,7 +435,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
