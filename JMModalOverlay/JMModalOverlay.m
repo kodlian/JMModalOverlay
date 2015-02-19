@@ -320,8 +320,8 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
 #pragma mark direction
 + (CATransition*) _appearAnimationForDirection:(JMModalOverlayAnimationDirection)direction{
     CATransition *transition = [CATransition animation];
-    [transition setDuration:0.4];
-    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];//kCAMediaTimingFunctionEaseInEaseOut]];
+    [transition setDuration:0.3];
+    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];//kCAMediaTimingFunctionEaseInEaseOut]];
     
     
     transition.type = kCATransitionPush;
@@ -354,8 +354,8 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
 }
 + (CATransition*) _dissapearAnimationForDirection:(JMModalOverlayAnimationDirection)direction{
     CATransition *transition = [CATransition animation];
-    [transition setDuration:0.4];
-    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];//kCAMediaTimingFunctionEaseInEaseOut]];
+    [transition setDuration:0.3];
+    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];//kCAMediaTimingFunctionEaseInEaseOut]];
     transition.type = kCATransitionPush;
     
     switch (direction) {
