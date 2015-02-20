@@ -1,13 +1,13 @@
 ## JMModalOverlay.
 Create easily and display a modal overlay with custom content above a `NSWindow`.
 
-![JMModalOverlay Demo screenshot](https://raw.github.com/kodlian/JMModalOverlay/master/Demo/screenshot.png)
+![JMModalOverlay Demo screenshot](https://raw.github.com/kodlian/JMModalOverlay/master/Demo/Preview.gif)
 
 
 ### Features
 The content is provided by a `NSViewController`. 
 
-The modalOverlay contains many customizable properties: backgroundColor, animates, animation direction, .... 
+The modalOverlay contains many customizable properties: backgroundColor, appearance, animates, animation direction, .... 
 
 Notifications will be sent before and after the modalOverlay is shown and closed.
 The behavior of modalOverlay can be altered by a delegate. 
