@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A71ECBBA17293418004BD647 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = A71ECBB917293418004BD647 /* screenshot.png */; };
 		A74EE4BF17267BE8006EFBAA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74EE4BE17267BE8006EFBAA /* Cocoa.framework */; };
 		A74EE4C917267BE8006EFBAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74EE4C717267BE8006EFBAA /* InfoPlist.strings */; };
 		A74EE4CD17267BE8006EFBAA /* JMModalOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = A74EE4CC17267BE8006EFBAA /* JMModalOverlay.m */; };
@@ -56,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		3F7F85C61A9768350045A2C1 /* Version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = "<group>"; };
-		A71ECBB917293418004BD647 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		A74EE4BB17267BE8006EFBAA /* JMModalOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMModalOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74EE4BE17267BE8006EFBAA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A74EE4C117267BE8006EFBAA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -185,7 +183,6 @@
 		A74EE4D917267E0C006EFBAA /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				A71ECBB917293418004BD647 /* screenshot.png */,
 				A74EE4F017268F79006EFBAA /* ViewControllers */,
 				A74EE4E517267E0C006EFBAA /* JMAppDelegate.h */,
 				A74EE4E617267E0C006EFBAA /* JMAppDelegate.m */,
@@ -319,7 +316,6 @@
 				A74EE4EA17267E0C006EFBAA /* MainMenu.xib in Resources */,
 				A74EE4F517268FA5006EFBAA /* JMFirstExampleViewController.xib in Resources */,
 				A74EE4FA17268FBE006EFBAA /* JMSecondExampleViewController.xib in Resources */,
-				A71ECBBA17293418004BD647 /* screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
