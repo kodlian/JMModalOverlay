@@ -1341,7 +1341,7 @@
 							<object class="NSButtonCell" key="NSCell" id="546949484">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Exemple 1</string>
+								<string key="NSContents">Example 1</string>
 								<object class="NSFont" key="NSSupport" id="162494384">
 									<bool key="IBIsSystemFont">YES</bool>
 									<double key="NSSize">13</double>
@@ -1376,7 +1376,7 @@
 							<object class="NSButtonCell" key="NSCell" id="676787712">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Exemple 2</string>
+								<string key="NSContents">Example 2</string>
 								<reference key="NSSupport" ref="162494384"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="1003059275"/>
