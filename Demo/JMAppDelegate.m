@@ -30,17 +30,19 @@
     _modalOverlay.animationDirection = JMModalOverlayDirectionBottom;
     _modalOverlay.shouldOverlayTitleBar = YES;
     _modalOverlay.shouldCloseWhenClickOnBackground = NO;
-
-    _modalOverlay.backgroundColor = [NSColor colorWithCalibratedWhite:0.0 alpha:0.6];
+    _modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
+    _modalOverlay.backgroundColor = [NSColor colorWithCalibratedWhite:0.0 alpha:0.0];
     [_modalOverlay showInWindow:self.window];
 }
 
 - (IBAction)showExemple2:(id)sender {
     _modalOverlay.contentViewController = _secondExampleViewController;
-    _modalOverlay.animates = NO;
+    _modalOverlay.animates = YES;
+    _modalOverlay.animationDirection = JMModalOverlayDirectionNone;
     _modalOverlay.shouldOverlayTitleBar = NO;
-    _modalOverlay.backgroundColor = [NSColor colorWithCalibratedRed:0.986 green:0.094 blue:0.117 alpha:0.700];
+    _modalOverlay.backgroundColor = [NSColor colorWithCalibratedRed:0.986 green:0.000 blue:0.00 alpha:0.300];
     _modalOverlay.shouldCloseWhenClickOnBackground = YES;
+    _modalOverlay.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
 
     [_modalOverlay showInWindow:self.window];
 
