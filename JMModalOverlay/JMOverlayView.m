@@ -2,7 +2,7 @@
 //  JMOverlayView.m
 //  JMModalOverlay
 //
-//  Copyright (c) 2013 Jérémy Marchand (http://www.kodlian.com)
+//  Copyright (c) 2013-2015 Jérémy Marchand (http://www.kodlian.com)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -31,11 +31,8 @@
 - (void)setBackgroundColor:(NSColor *)backgroundColor{
     if(_backgroundColor != backgroundColor){
         _backgroundColor = backgroundColor;
-        [self setWantsLayer:YES];
-
     }
 }
-
 
 #pragma mark -
 #pragma mark background color
@@ -46,28 +43,21 @@
 }
 #pragma mark -
 #pragma mark background color
-- (void)viewDidMoveToSuperview{
-    
-    [[self layer] setMasksToBounds:YES];
-    
-}
 - (BOOL)acceptsFirstMouse:(NSEvent *)theEvent{
-    return YES;
+    return _modalOverlay.shouldCloseWhenClickOnBackground;
 
 }
 - (BOOL) acceptsTouchEvents{
-  
-    return YES;
+    return _modalOverlay.shouldCloseWhenClickOnBackground;
 }
 - (void)mouseDown:(NSEvent *)theEvent{
-  
-    
-}
-- (void)mouseUp:(NSEvent *)theEvent{
     if(_modalOverlay.shouldCloseWhenClickOnBackground)
         [_modalOverlay performClose:self];
     else{
-        [super mouseUp:theEvent];
+        [super mouseDown:theEvent];
     }
+}
+- (BOOL)allowsVibrancy{
+    return YES;
 }
 @end

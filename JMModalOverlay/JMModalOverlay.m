@@ -2,7 +2,7 @@
 //  JMModalOverlay.m
 //  JMModalOverlay
 //
-//  Copyright (c) 2013 Jérémy Marchand (http://www.kodlian.com)
+//  Copyright (c) 2013-2015 Jérémy Marchand (http://www.kodlian.com)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@
 #import "JMModalOverlay.h"
 #import "JMOverlayView.h"
 #import <QuartzCore/QuartzCore.h>
-#import "JMModalOverlayView.h"
+#import "Version.h"
 
 
 
@@ -50,7 +50,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
     NSWindow *_modalWindow;
     JMOverlayView *_overlayView;
     NSView *_containerView;
-    
+    NSVisualEffectView *_visualEffectView;
     NSWindow *_parentWindow;   
     BOOL _wasResizable;
 }
@@ -67,7 +67,10 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         
         self.backgroundColor = [NSColor colorWithCalibratedWhite:0 alpha:0.4];
         self.animates = YES;
-        
+        if (JMMaverickOrSuperior) {
+            self.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
+        }
+
         // Notfication
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modalOverlayWillShow:) name:JMModalOverlayWillShowNotification object:self];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modalOverlayDidShow:) name:JMModalOverlayDidShowNotification object:self];
@@ -148,13 +151,7 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
     [modalWindow setBackgroundColor:[NSColor clearColor]];
     [modalWindow setOpaque:NO];
     [modalWindow setHasShadow:NO];
-    JMModalOverlayView *contentView = [[JMModalOverlayView alloc] initWithFrame:[modalWindow.contentView frame]];
-    contentView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
-    
-    [modalWindow setContentView:contentView];
-    
-    
-    
+
     return modalWindow;
 }
 #pragma mark -
@@ -194,7 +191,12 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         }
         _modalWindow  = [self.class _modalWindowForFrame:NSInsetRect(window.frame, 0, 0)];
         [_modalWindow setAlphaValue:0.f];
-        
+        if (JMMaverickOrSuperior) {
+            _modalWindow.appearance = _appearance;
+        }
+        [_modalWindow.contentView setWantsLayer:YES];
+        [[_modalWindow.contentView layer] setCornerRadius:4];
+        [[_modalWindow.contentView layer] setMasksToBounds:YES];
         
         // Overlay
         NSRect overlayFrame;
@@ -207,13 +209,24 @@ NSString * const JMModalOverlayDidCloseNotification = @"JMModalOverlayDidCloseNo
         _overlayView = [[JMOverlayView alloc] initWithFrame:overlayFrame];
         [_overlayView setBackgroundColor:self.backgroundColor];
         _overlayView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
-        [_modalWindow.contentView addSubview:_overlayView];
         [_overlayView setModalOverlay:self];
         
         // Add container view
         _containerView = [[NSView alloc] initWithFrame:_overlayView.bounds];
-        [_overlayView addSubview:_containerView];
         _containerView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
+        
+        if (JMYosemiteOrSuperior && ([_appearance.name isEqualToString:NSAppearanceNameVibrantDark] || [_appearance.name isEqualToString:NSAppearanceNameVibrantLight])) {
+            _visualEffectView = [[NSVisualEffectView alloc] initWithFrame:overlayFrame];
+            _visualEffectView.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
+            _visualEffectView.state = NSVisualEffectStateActive;
+            [_modalWindow.contentView addSubview:_visualEffectView];
+            [_visualEffectView addSubview:_overlayView];
+            [_overlayView addSubview:_containerView];
+        }
+        else {
+            [_modalWindow.contentView addSubview:_overlayView];
+            [_overlayView addSubview:_containerView];
+        }
         
         // Configure content view
         self.contentViewController.view.translatesAutoresizingMaskIntoConstraints = YES;

@@ -2,8 +2,8 @@
 //  JMModalOverlay.h
 //  JMModalOverlay
 //
-//  Copyright (c) 2013 Jérémy Marchand (http://www.kodlian.com)
-//                                    
+//  Copyright (c) 2013-2015 Jérémy Marchand (http://www.kodlian.com)
+//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -29,7 +29,7 @@
 #pragma mark Type
 
 /*
- modalOVerlay animation direction.
+ modalOverlay animation direction.
  */
 typedef enum {
     JMModalOverlayDirectionNone,
@@ -39,6 +39,7 @@ typedef enum {
     JMModalOverlayDirectionRight,
 
 } JMModalOverlayAnimationDirection;
+
 
 
 #pragma mark -
@@ -68,6 +69,10 @@ typedef enum {
 /*  Define the animation direction when the contentViewController's view appears. The default value is JMModalOverlayDirectionNone.
  */
 @property() JMModalOverlayAnimationDirection animationDirection;
+
+/*  Define the appearance that would be used on the modal view. The default appearance is NSAppearanceNameAqua.
+ */
+@property() NSAppearance *appearance;
 
 /*  Should the modalOverlay close when user clicks on overlay background. The default value is YES.
  */

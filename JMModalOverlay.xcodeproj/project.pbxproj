@@ -28,8 +28,6 @@
 		A74EE50317269609006EFBAA /* JMOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74EE50117269609006EFBAA /* JMOverlayView.m */; };
 		A74EE5051726B006006EFBAA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74EE5041726B006006EFBAA /* QuartzCore.framework */; };
 		A74EE5061726B38F006EFBAA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74EE5041726B006006EFBAA /* QuartzCore.framework */; };
-		A7E8911C1727DF720088BB05 /* JMModalOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E8911A1727DF720088BB05 /* JMModalOverlayView.h */; };
-		A7E8911D1727DF720088BB05 /* JMModalOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E8911B1727DF720088BB05 /* JMModalOverlayView.m */; };
 		A7E8912517286A4A0088BB05 /* JMFirstExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E8912417286A4A0088BB05 /* JMFirstExampleView.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F7F85C61A9768350045A2C1 /* Version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = "<group>"; };
 		A71ECBB917293418004BD647 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		A74EE4BB17267BE8006EFBAA /* JMModalOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMModalOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74EE4BE17267BE8006EFBAA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -86,8 +85,6 @@
 		A74EE50017269609006EFBAA /* JMOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMOverlayView.h; sourceTree = "<group>"; };
 		A74EE50117269609006EFBAA /* JMOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMOverlayView.m; sourceTree = "<group>"; };
 		A74EE5041726B006006EFBAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		A7E8911A1727DF720088BB05 /* JMModalOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMModalOverlayView.h; sourceTree = "<group>"; };
-		A7E8911B1727DF720088BB05 /* JMModalOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMModalOverlayView.m; sourceTree = "<group>"; };
 		A7E8912317286A4A0088BB05 /* JMFirstExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFirstExampleView.h; sourceTree = "<group>"; };
 		A7E8912417286A4A0088BB05 /* JMFirstExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFirstExampleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +117,6 @@
 			children = (
 				A74EE50017269609006EFBAA /* JMOverlayView.h */,
 				A74EE50117269609006EFBAA /* JMOverlayView.m */,
-				A7E8911A1727DF720088BB05 /* JMModalOverlayView.h */,
-				A7E8911B1727DF720088BB05 /* JMModalOverlayView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -172,6 +167,7 @@
 				A74EE4CC17267BE8006EFBAA /* JMModalOverlay.m */,
 				A71ECBB8172932FD004BD647 /* Views */,
 				A74EE4C517267BE8006EFBAA /* Supporting Files */,
+				3F7F85C61A9768350045A2C1 /* Version.h */,
 			);
 			path = JMModalOverlay;
 			sourceTree = "<group>";
@@ -235,7 +231,6 @@
 			files = (
 				A74EE4EF17268EC1006EFBAA /* JMModalOverlay.h in Headers */,
 				A74EE50217269609006EFBAA /* JMOverlayView.h in Headers */,
-				A7E8911C1727DF720088BB05 /* JMModalOverlayView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +332,6 @@
 			files = (
 				A74EE4CD17267BE8006EFBAA /* JMModalOverlay.m in Sources */,
 				A74EE50317269609006EFBAA /* JMOverlayView.m in Sources */,
-				A7E8911D1727DF720088BB05 /* JMModalOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
